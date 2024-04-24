@@ -1,0 +1,29 @@
+#https://sequencediagram.org/
+participant "Platform A\n(want IRI_A)" as Platform A
+participant "Registry of Mapping,\nincl format conversion" as Registry
+participant Platform B
+
+
+Platform A-#red:3>(1)Platform B:GET/types
+activate Platform B
+Platform A(1)<-Platform B:have[IRI_B1...Bn]
+deactivate Platform B
+
+alt wanted IRI_A is in [IRI_B1...Bn]
+Platform A->(1)Platform B:get of type IRI_A=IRI_Bx
+
+else wanted IRI_A is not in [IRI_B1...Bn]
+Platform A->(1)Registry:GET/mapping(IRI_A, [IRI_B1...Bn])
+Platform A(1)<-Registry:have list of available mapping
+
+alt empty list of available mapping or multiple mappings available (see example)
+rbox over Platform A: human needs to map
+
+else single, satisfactory and valid mapping available
+
+Platform A->(1)Platform B:GET/all of type IRI_B
+Platform A(1)<-Platform B:RESPONSE[IRI_B1...Bn]
+
+end
+end
+
