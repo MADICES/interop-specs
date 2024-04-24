@@ -1,0 +1,8 @@
+#https://sequencediagram.org/
+participant "Platform A\n(want IRI_A)" as Platform A
+participant Platform B
+
+Platform A-#red>(1)Platform B:GET/ID
+Platform A(1)<#red-Platform B:handle
+Platform A-#red>(1)Platform B:GET handle
+Platform A(1)<#red-Platform B:entry
