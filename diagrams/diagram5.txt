@@ -1,0 +1,12 @@
+#https://sequencediagram.org/
+participant "Platform A\n(want IRI_A)" as Platform A
+participant "central endpoint/types registry" as Registry
+participant Platform B
+participant Platform C
+
+Platform A->Registry:announce [IRI_A1...An]
+Platform B->Registry:announce [IRI_B1...Bn]
+Platform C->Registry:announce [IRI_C1...Cn]
+
+Platform A->(1)Registry:GET/types
+Platform A(1)<-Registry:have[IRI_A1...An, IRI_B1...Bn, IRI_C1...Cn]
