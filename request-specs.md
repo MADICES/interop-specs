@@ -27,3 +27,18 @@ In the header of the HTTP request, the HTTP content type (of type mime type) is 
 Each handle based reqest includes the following processes:
 
 <img src="./diagrams/diagram3.png" width="300" alt="DIAGRAM3.png">
+
+
+**exact role of the registry:**
+The exact role of the registry can be flexible, if the 
+
+{types+endpoints}
+
+
+<img src="./diagrams/diagram3.png" width="300" alt="DIAGRAM4.png">
+[DIAGRAM4.png]
+
+<img src="./diagrams/diagram3.png" width="300" alt="DIAGRAM5.png">
+[DIAGRAM5.png]
+<img src="./diagrams/diagram3.png" width="300" alt="DIAGRAM6.png">
+[DIAGRAM6.png]
