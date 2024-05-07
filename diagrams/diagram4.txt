@@ -1,0 +1,11 @@
+#https://sequencediagram.org/
+participant "Platform A\n(want IRI_A)" as Platform A
+participant Platform B
+participant Platform C
+
+
+Platform A->(1)Platform B:GET/types
+Platform A(1)<-Platform B:have[IRI_B1...Bn]
+
+Platform A->(1)Platform C:GET/types
+Platform A(1)<-Platform C:have[IRI_C1...Cn]

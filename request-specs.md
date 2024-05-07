@@ -14,7 +14,7 @@ Diagram 2: Example case for multiple possible mappings.
 The minimal communication between platforms can be reduced to six endpoints.
 
 - GET/types
-- GET/oftype/{type} --> maybe response {type=ma:PlatformTypesSet}
+- GET/oftype/{type} --> maybe response, probably RO-crate {type=ma:PlatformTypesSet}
 - GET/{id}
 - POST/entry
 - POST/entries
@@ -27,3 +27,19 @@ In the header of the HTTP request, the HTTP content type (of type mime type) is 
 Each handle based reqest includes the following processes:
 
 <img src="./diagrams/diagram3.png" width="300" alt="DIAGRAM3.png">
+
+
+**exact role of the registry:**
+The exact role of the registry can be flexible, if the endpoints are attached to the IRIs. Also there is no necessity for a central registry in this case.
+
+ma:PlatformTypesSet := {[{type1, URL/endpoint1}, {type2, URL/endpoint2}, ...]}
+
+
+<img src="./diagrams/diagram4.png" width="300" alt="DIAGRAM4.png">
+Diagram 4: no central registry 
+
+<img src="./diagrams/diagram5.png" width="300" alt="DIAGRAM5.png">
+Diagram 5: central registry
+
+<img src="./diagrams/diagram6.png" width="300" alt="DIAGRAM6.png">
+Diagram 6: vitrual registry querying multiple endpoints
